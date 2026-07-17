@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Git & GitHub Guide</title>
+  <link rel="stylesheet" href="../assest/css/tut.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="badge">TEAM WEBSITE • GIT GUIDE</div>
+      <h1>Git & GitHub<br><span>Team Workflow</span></h1>
+      <p class="subtitle">A simple guide for working together without accidentally deleting the entire project 💀</p>
+      <div class="repo-box">
+        <span class="repo-label">REPOSITORY</span>
+        <code>github.com/treesymse-source/Team</code>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="danger-card">
+      <div class="danger-icon">⚠️</div>
+      <div>
+        <h2>STOP. READ THIS FIRST.</h2>
+        <p>This project is shared between multiple people. <strong>Do not run random Git commands</strong> if you don't know what they do.</p>
+        <div class="danger-list">
+          <span>❌ Don't delete the whole project</span>
+          <span>❌ Don't use <code>git push --force</code></span>
+          <span>❌ Don't use <code>git reset --hard</code></span>
+          <span>❌ Don't delete files you don't understand</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <span class="number">01</span>
+        <div>
+          <h2>First time setup</h2>
+          <p>Do this once when joining the project.</p>
+        </div>
+      </div>
+
+      <div class="steps">
+        <article class="step">
+          <div class="step-number">1</div>
+          <div>
+            <h3>Install Git</h3>
+            <p>Download and install Git. The default installation options are fine.</p>
+            <a class="button" href="https://git-scm.com/downloads" target="_blank">Download Git ↗</a>
+          </div>
+        </article>
+
+        <article class="step">
+          <div class="step-number">2</div>
+          <div>
+            <h3>Clone the project</h3>
+            <p>Open CMD in the folder where you want the project, then run:</p>
+            <div class="code-block"><code>git clone https://github.com/treesymse-source/Team.git</code><button onclick="copyCode(this)">Copy</button></div>
+          </div>
+        </article>
+
+        <article class="step">
+          <div class="step-number">3</div>
+          <div>
+            <h3>Enter the project</h3>
+            <div class="code-block"><code>cd Team</code><button onclick="copyCode(this)">Copy</button></div>
+            <p>Open the <strong>Team</strong> folder in VS Code.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="workflow">
+      <div class="section-title">
+        <span class="number">02</span>
+        <div>
+          <h2>Everyday workflow</h2>
+          <p>Follow these steps every time you work on the project.</p>
+        </div>
+      </div>
+
+      <div class="workflow-grid">
+        <article class="workflow-card pull">
+          <div class="card-icon">↓</div>
+          <h3>1. Pull first</h3>
+          <p>Get the newest version before starting work.</p>
+          <div class="code-block"><code>git pull</code><button onclick="copyCode(this)">Copy</button></div>
+        </article>
+
+        <article class="workflow-card work">
+          <div class="card-icon">✎</div>
+          <h3>2. Do your work</h3>
+          <p>Edit only the files you need. Don't touch random files.</p>
+          <div class="mini-note">Example: You edit <code>pages/info.html</code></div>
+        </article>
+
+        <article class="workflow-card status">
+          <div class="card-icon">?</div>
+          <h3>3. Check changes</h3>
+          <p>See what files you changed.</p>
+          <div class="code-block"><code>git status</code><button onclick="copyCode(this)">Copy</button></div>
+        </article>
+
+        <article class="workflow-card add">
+          <div class="card-icon">+</div>
+          <h3>4. Stage changes</h3>
+          <p>Prepare your changes to be saved.</p>
+          <div class="code-block"><code>git add .</code><button onclick="copyCode(this)">Copy</button></div>
+        </article>
+
+        <article class="workflow-card commit">
+          <div class="card-icon">✓</div>
+          <h3>5. Commit</h3>
+          <p>Create a save point with a clear message.</p>
+          <div class="code-block"><code>git commit -m "Updated info page"</code><button onclick="copyCode(this)">Copy</button></div>
+        </article>
+
+        <article class="workflow-card push">
+          <div class="card-icon">↑</div>
+          <h3>6. Push</h3>
+          <p>Upload your changes to GitHub.</p>
+          <div class="code-block"><code>git push</code><button onclick="copyCode(this)">Copy</button></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="quick-reference">
+      <div class="section-title">
+        <span class="number">03</span>
+        <div>
+          <h2>Quick reference</h2>
+          <p>Commands you may need.</p>
+        </div>
+      </div>
+
+      <div class="command-list">
+        <div class="command-row"><div><code>git status</code><span>See what changed</span></div><button onclick="copyText('git status')">Copy</button></div>
+        <div class="command-row"><div><code>git log --oneline</code><span>See previous save points</span></div><button onclick="copyText('git log --oneline')">Copy</button></div>
+        <div class="command-row"><div><code>git remote -v</code><span>Check your GitHub connection</span></div><button onclick="copyText('git remote -v')">Copy</button></div>
+        <div class="command-row"><div><code>git revert COMMIT_ID</code><span>Safely undo a previous commit</span></div><button onclick="copyText('git revert COMMIT_ID')">Copy</button></div>
+      </div>
+    </section>
+
+    <section class="emergency">
+      <div class="emergency-header">
+        <span>🚨</span>
+        <div>
+          <h2>Something went wrong?</h2>
+          <p>Don't panic. Don't delete the project.</p>
+        </div>
+      </div>
+      <ol>
+        <li><strong>Stop</strong> and don't run more commands.</li>
+        <li>Copy the complete error message.</li>
+        <li>Tell the team owner what you were trying to do.</li>
+        <li>Ask for help before using commands you don't understand.</li>
+      </ol>
+      <div class="conflict-box">
+        <strong>Merge conflict?</strong>
+        <span>It usually means two people edited the same part of the same file. Do not delete the whole file. Ask for help.</span>
+      </div>
+    </section>
+
+    <section class="golden-rule">
+      <div class="rule-icon">⭐</div>
+      <div>
+        <h2>The Golden Rule</h2>
+        <p><strong>PULL BEFORE WORKING.</strong> &nbsp; → &nbsp; Work &nbsp; → &nbsp; <strong>PUSH AFTER FINISHING.</strong></p>
+        <p class="small">If you are confused: STOP AND ASK. Do not delete the whole project 💀</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made for the Team Website project • Keep the code safe 🛡️</p>
+  </footer>
+
+  <div id="toast">Copied!</div>
+  <script>
+    function showToast() {
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 1400);
+    }
+    function copyText(text) {
+      navigator.clipboard.writeText(text);
+      showToast();
+    }
+    function copyCode(button) {
+      const code = button.parentElement.querySelector('code').innerText;
+      navigator.clipboard.writeText(code);
+      showToast();
+    }
+  </script>
+</body>
+</html>
