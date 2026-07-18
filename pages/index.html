@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centre_Epanouissement_Fbs</title>
+    <link rel="stylsheet" href="assest/css/main.css">
 </head>
 <body>
     <header class="hero">
@@ -24,6 +25,28 @@
         <div class="menu_container">
             <div class="ast_container">
                 
+            </div>
+        </div>
+        <div class="tabs-container">
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="showTab('home')">Home</button>
+                <button class="tab-btn" onclick="showTab('profile')">Event</button>
+                <button class="tab-btn" onclick="showTab('settings')">Joining</button>
+            </div>
+ 
+            <div id="home" class="tab-content active">
+                <h2>Home</h2>
+                <p>This is the home tab. Put your main content here.</p>
+            </div>
+ 
+            <div id="Event" class="tab-content">
+                <h2>Event</h2>
+                <p>This is the profile tab. Show user info here.</p>
+            </div>
+ 
+            <div id="Joining" class="tab-content">
+                <h2>Joining</h2>
+                <p>This is the settings tab. Options and preferences go here.</p>
             </div>
         </div>
 
